@@ -7,7 +7,7 @@ mongoose.connect(DBURL)
     console.log("Db is connected")
 })
 .catch((err)=>{
-    console.log("db is not connected")
+    console.log("db   is not connected")
     console.log(err)
     process.exit(1)
 })
