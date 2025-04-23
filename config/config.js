@@ -5,7 +5,7 @@ const dev={
         port:process.env.PORT||4001
     },
     db:{
-        url:process.env.DB_URL||'mongodb://localhost:2017/collegeDB'
+        url:process.env.DB_URL||'mongodb://localhost:27017/collegeDB'
     }
 }
 module.exports=dev
