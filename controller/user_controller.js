@@ -1,5 +1,7 @@
 const user=require('../models/user_model')
 const {v4:uuidv4}=require("uuid")
+
+
 exports.getAllUser=async (req,res)=>{
     try{
           
@@ -14,6 +16,8 @@ exports.getAllUser=async (req,res)=>{
         })
     }
 }
+
+
 exports.getSingleData=async(req,res)=>{
    const id=req.params.id
    const getSingleData=await user.find({_id:id})
@@ -21,6 +25,8 @@ exports.getSingleData=async(req,res)=>{
     data:getSingleData
    })
 }
+
+
 
 exports.createData=async(req,res)=>{
     try{
@@ -41,6 +47,8 @@ exports.createData=async(req,res)=>{
     
 }
 
+
+
 exports.updateData=async(req,res)=>{
     const id=req.params.id
     const updateData=await user.updateOne({_id:id},{
@@ -53,6 +61,8 @@ exports.updateData=async(req,res)=>{
     })
 }
 
+
+
 exports.deleteData=async(req,res)=>{
    const id=req.params.id
    const deleteData=await user.deleteOne({_id:id})
@@ -60,3 +70,5 @@ exports.deleteData=async(req,res)=>{
     data:deleteData
    })
 }
+
+
