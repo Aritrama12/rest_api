@@ -1,5 +1,7 @@
+
 const app=require('./app')
-const port=4001
+const config=require('./config/config')
+const port=config.app.port
 const hostname='127.0.0.1'
 
 
